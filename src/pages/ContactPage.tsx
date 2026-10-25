@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/siteConfig';
 import { PageId } from '../components/Header';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, AlertCircle, ChevronDown, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, AlertCircle, ChevronDown, Sparkles, Instagram, Facebook } from 'lucide-react';
 
 interface ContactPageProps {
   onNavigate: (page: PageId) => void;
@@ -149,15 +149,54 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     {siteConfig.contact.email}
                   </a>
                 </div>
+
+                {/* Social Media Channels */}
+                <div className="pt-2 flex items-center gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#3D2314]/70 mr-1">
+                    Follow:
+                  </span>
+                  <a
+                    href={siteConfig.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-[#141210] text-[#D4A53A] flex items-center justify-center hover:bg-[#D4A53A] hover:text-[#141210] transition-colors shadow-sm"
+                    title="Follow on Instagram (@naijapotkitchen_grill_mk)"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={siteConfig.socials.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-[#141210] text-[#D4A53A] flex items-center justify-center hover:bg-[#D4A53A] hover:text-[#141210] transition-colors shadow-sm"
+                    title="Follow on TikTok (@naija.pot.kitchen)"
+                    aria-label="TikTok"
+                  >
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.88-4.47V8.58a8.27 8.27 0 0 0 4.84 1.56V6.69z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href={siteConfig.socials.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-[#141210] text-[#D4A53A] flex items-center justify-center hover:bg-[#D4A53A] hover:text-[#141210] transition-colors shadow-sm"
+                    title="Follow on Facebook"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
 
               {/* Hours Breakdown */}
               <div className="pt-4 border-t border-slate-100 space-y-3">
-                <h4 className="font-bold text-xs uppercase tracking-wider text-[#6D1F2B] flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-[#C6A15B]" />
+                <h4 className="font-bold text-xs uppercase tracking-wider text-[#3D2314] flex items-center gap-1.5">
+                  <Clock className="w-4 h-4 text-[#D4A53A]" />
                   Weekly Service Hours
                 </h4>
-                <div className="space-y-2 text-xs text-[#211A19]/80">
+                <div className="space-y-2 text-xs text-[#0B0A09]/80">
                   {siteConfig.hours.map((h) => (
                     <div key={h.day} className="flex justify-between py-1 border-b border-slate-100">
                       <span className="font-medium">{h.day}</span>
@@ -173,16 +212,16 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Google Map Box */}
-            <div className="bg-white p-4 rounded-2xl border border-[#6D1F2B]/15 shadow-sm space-y-3">
+            <div className="bg-white p-4 rounded-2xl border border-[#D4A53A]/20 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#6D1F2B]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#3D2314]">
                   Interactive Location Map
                 </span>
                 <a
                   href={siteConfig.contact.googleMapsDirectionsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-xs text-[#C6A15B] hover:text-[#6D1F2B] font-bold"
+                  className="text-xs text-[#D4A53A] hover:text-[#3D2314] font-bold"
                 >
                   Open in Google Maps →
                 </a>
@@ -202,12 +241,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* Right Column: Contact Message Form */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-[#6D1F2B]/15 shadow-sm space-y-6">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-[#D4A53A]/20 shadow-sm space-y-6">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-[#6D1F2B]">
+              <h3 className="font-serif text-2xl font-bold text-[#3D2314]">
                 Send Us an Enquiry
               </h3>
-              <p className="text-xs text-[#211A19]/70 mt-1">
+              <p className="text-xs text-[#0B0A09]/70 mt-1">
                 Have a question about large party bookings, catering, or dietary requirements? Drop us a note.
               </p>
             </div>
@@ -217,10 +256,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <div className="w-16 h-16 mx-auto rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h4 className="font-serif text-2xl font-bold text-[#6D1F2B]">
+                <h4 className="font-serif text-2xl font-bold text-[#3D2314]">
                   Message Sent Successfully!
                 </h4>
-                <p className="text-xs text-[#211A19]/75 max-w-sm mx-auto">
+                <p className="text-xs text-[#0B0A09]/75 max-w-sm mx-auto">
                   E se gan! Thank you for reaching out, {name}. Our hospitality team will respond to {email} within 24 hours.
                 </p>
                 <button
@@ -228,7 +267,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     setSubmitted(false);
                     setMessage('');
                   }}
-                  className="px-6 py-2.5 bg-[#6D1F2B] text-[#FFF7E8] text-xs font-bold rounded-md hover:bg-[#4A121B] transition-colors cursor-pointer"
+                  className="px-6 py-2.5 bg-[#3D2314] text-[#FFFDF9] text-xs font-bold rounded-md hover:bg-[#4E2E1A] transition-colors cursor-pointer border border-[#D4A53A]/40"
                 >
                   Send Another Message
                 </button>
@@ -244,7 +283,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#6D1F2B] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#3D2314] uppercase tracking-wider mb-1">
                       Your Name *
                     </label>
                     <input
@@ -253,12 +292,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. Samuel Adeleke"
-                      className="w-full px-3.5 py-2.5 bg-white border border-[#6D1F2B]/20 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#6D1F2B]"
+                      className="w-full px-3.5 py-2.5 bg-white border border-[#D4A53A]/30 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#D4A53A]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#6D1F2B] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#3D2314] uppercase tracking-wider mb-1">
                       Email Address *
                     </label>
                     <input
@@ -267,14 +306,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="you@example.com"
-                      className="w-full px-3.5 py-2.5 bg-white border border-[#6D1F2B]/20 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#6D1F2B]"
+                      className="w-full px-3.5 py-2.5 bg-white border border-[#D4A53A]/30 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#D4A53A]"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#6D1F2B] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#3D2314] uppercase tracking-wider mb-1">
                       Phone Number (Optional)
                     </label>
                     <input
@@ -282,18 +321,18 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+44 7123 456789"
-                      className="w-full px-3.5 py-2.5 bg-white border border-[#6D1F2B]/20 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#6D1F2B]"
+                      className="w-full px-3.5 py-2.5 bg-white border border-[#D4A53A]/30 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#D4A53A]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#6D1F2B] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#3D2314] uppercase tracking-wider mb-1">
                       Enquiry Subject
                     </label>
                     <select
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-white border border-[#6D1F2B]/20 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#6D1F2B]"
+                      className="w-full px-3.5 py-2.5 bg-white border border-[#D4A53A]/30 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#D4A53A]"
                     >
                       <option value="General Enquiry">General Enquiry</option>
                       <option value="Group Celebration / Private Dining">Group Celebration / Private Dining</option>
@@ -305,7 +344,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#6D1F2B] uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-[#3D2314] uppercase tracking-wider mb-1">
                     Your Message *
                   </label>
                   <textarea
@@ -314,15 +353,15 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="How can our hospitality team assist you today?"
-                    className="w-full px-3.5 py-2.5 bg-white border border-[#6D1F2B]/20 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#6D1F2B]"
+                    className="w-full px-3.5 py-2.5 bg-white border border-[#D4A53A]/30 rounded-lg text-xs sm:text-sm focus:ring-1 focus:ring-[#D4A53A]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-[#6D1F2B] hover:bg-[#4A121B] text-[#FFF7E8] font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3.5 bg-[#3D2314] hover:bg-[#4E2E1A] text-[#FFFDF9] font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer border border-[#D4A53A]/40"
                 >
-                  <Send className="w-4 h-4 text-[#C6A15B]" />
+                  <Send className="w-4 h-4 text-[#D4A53A]" />
                   <span>Send Message</span>
                 </button>
               </form>
@@ -334,10 +373,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
       {/* FAQ Section */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-2">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#6D1F2B]">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#3D2314]">
             Help & Information
           </span>
-          <h2 className="font-serif text-3xl font-bold text-[#211A19]">
+          <h2 className="font-serif text-3xl font-bold text-[#0B0A09]">
             Frequently Asked Questions
           </h2>
         </div>
@@ -348,18 +387,18 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             return (
               <div
                 key={faq.q}
-                className="bg-white rounded-xl border border-[#6D1F2B]/15 overflow-hidden transition-all shadow-xs"
+                className="bg-white rounded-xl border border-[#D4A53A]/20 overflow-hidden transition-all shadow-xs"
               >
                 <button
                   type="button"
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base text-[#211A19] hover:text-[#6D1F2B] cursor-pointer"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base text-[#0B0A09] hover:text-[#3D2314] cursor-pointer"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-[#C6A15B] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-[#D4A53A] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 text-xs sm:text-sm text-[#211A19]/80 leading-relaxed border-t border-slate-100 pt-3">
+                  <div className="px-5 pb-5 text-xs sm:text-sm text-[#0B0A09]/80 leading-relaxed border-t border-slate-100 pt-3">
                     {faq.a}
                   </div>
                 )}

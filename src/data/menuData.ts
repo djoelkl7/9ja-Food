@@ -355,6 +355,7 @@ export const menuItems: MenuItem[] = [
     category: 'drinks',
     description: 'The national drink of celebration: Fanta and Sprite stirred with Angostura bitters, grenadine, cucumber ribbons, and fresh orange wheels.',
     price: 5.50,
+    image: '/src/assets/images/craft_chapman_cocktail_1792960788048.jpg',
     spiceLevel: 0,
     dietary: ['Vegetarian', 'Gluten-Free', 'Dairy-Free'],
     allergens: [],

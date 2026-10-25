@@ -94,7 +94,7 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
           {/* Swallow Choice (if applicable) */}
           {dish.swallowIncluded && dish.availableSwallows && (
             <div className="space-y-2">
-              <label className="font-bold text-[#6D1F2B] uppercase tracking-wider block">
+              <label className="font-bold text-[#3D2314] uppercase tracking-wider block">
                 Select Your Swallow (Included)
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -105,12 +105,12 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
                     onClick={() => setSelectedSwallow(swallow)}
                     className={`py-2 px-3 text-left border rounded-md font-medium transition-all flex items-center justify-between cursor-pointer ${
                       selectedSwallow === swallow
-                        ? 'border-[#6D1F2B] bg-[#F3E8D6] text-[#6D1F2B] font-bold'
-                        : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                        ? 'border-[#D4A53A] bg-[#3D2314] text-[#D4A53A] font-bold shadow-xs'
+                        : 'border-stone-200 bg-white text-stone-700 hover:border-[#D4A53A]/50'
                     }`}
                   >
                     <span>{swallow}</span>
-                    {selectedSwallow === swallow && <Check className="w-3.5 h-3.5 text-[#6D1F2B]" />}
+                    {selectedSwallow === swallow && <Check className="w-3.5 h-3.5 text-[#D4A53A]" />}
                   </button>
                 ))}
               </div>
@@ -120,7 +120,7 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
           {/* Protein Choice (if applicable) */}
           {dish.proteinChoice && (
             <div className="space-y-2">
-              <label className="font-bold text-[#6D1F2B] uppercase tracking-wider block">
+              <label className="font-bold text-[#3D2314] uppercase tracking-wider block">
                 Select Protein Pairing
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -131,12 +131,12 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
                     onClick={() => setSelectedProtein(protein)}
                     className={`py-2 px-3 text-left border rounded-md font-medium transition-all flex items-center justify-between cursor-pointer ${
                       selectedProtein === protein
-                        ? 'border-[#6D1F2B] bg-[#F3E8D6] text-[#6D1F2B] font-bold'
-                        : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                        ? 'border-[#D4A53A] bg-[#3D2314] text-[#D4A53A] font-bold shadow-xs'
+                        : 'border-stone-200 bg-white text-stone-700 hover:border-[#D4A53A]/50'
                     }`}
                   >
                     <span>{protein}</span>
-                    {selectedProtein === protein && <Check className="w-3.5 h-3.5 text-[#6D1F2B]" />}
+                    {selectedProtein === protein && <Check className="w-3.5 h-3.5 text-[#D4A53A]" />}
                   </button>
                 ))}
               </div>
@@ -146,11 +146,11 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
           {/* Spice Preference */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <label className="font-bold text-[#6D1F2B] uppercase tracking-wider flex items-center gap-1.5">
-                <Flame className="w-3.5 h-3.5 text-amber-600" />
+              <label className="font-bold text-[#3D2314] uppercase tracking-wider flex items-center gap-1.5">
+                <Flame className="w-3.5 h-3.5 text-[#D4A53A]" />
                 Naija Spice Level
               </label>
-              <span className="font-medium text-[#6D1F2B]">{spiceLabels[spiceLevel]}</span>
+              <span className="font-medium text-[#3D2314]">{spiceLabels[spiceLevel]}</span>
             </div>
             <div className="grid grid-cols-4 gap-1.5">
               {[0, 1, 2, 3].map((lvl) => (
@@ -160,8 +160,8 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
                   onClick={() => setSpiceLevel(lvl)}
                   className={`py-1.5 text-center border rounded-md font-semibold cursor-pointer transition-all ${
                     spiceLevel === lvl
-                      ? 'border-[#6D1F2B] bg-[#6D1F2B] text-[#FFF7E8]'
-                      : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
+                      ? 'border-[#3D2314] bg-[#3D2314] text-[#D4A53A]'
+                      : 'border-stone-200 bg-white text-stone-700 hover:bg-stone-50'
                   }`}
                 >
                   {spiceLabels[lvl].split(' ')[0]}
@@ -172,7 +172,7 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
 
           {/* Special Instructions */}
           <div className="space-y-1">
-            <label className="font-bold text-[#6D1F2B] uppercase tracking-wider block">
+            <label className="font-bold text-[#3D2314] uppercase tracking-wider block">
               Special Instructions (Optional)
             </label>
             <input
@@ -180,12 +180,12 @@ export const DishCustomizerModal: React.FC<DishCustomizerModalProps> = ({ dish, 
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="e.g. Less oil, sauce on the side"
-              className="w-full px-3 py-2 bg-white border border-[#6D1F2B]/20 rounded-md focus:outline-none focus:ring-1 focus:ring-[#6D1F2B]"
+              className="w-full px-3 py-2 bg-white border border-[#3D2314]/20 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D4A53A]"
             />
           </div>
 
           {/* Dietary & Allergens info */}
-          <div className="pt-2 text-[11px] text-[#211A19]/60 border-t border-[#6D1F2B]/10 flex flex-wrap gap-x-4 gap-y-1">
+          <div className="pt-2 text-[11px] text-[#211A19]/60 border-t border-[#D4A53A]/20 flex flex-wrap gap-x-4 gap-y-1">
             {dish.allergens.length > 0 ? (
               <span>Allergens: {dish.allergens.join(', ')}</span>
             ) : (

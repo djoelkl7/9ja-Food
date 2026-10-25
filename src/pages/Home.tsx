@@ -68,9 +68,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
               alt="NAIJA POT KITCHEN & GRILL LTD Official Logo"
               className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-[#D4A53A] shadow-2xl object-contain bg-[#0B0A09] transition-transform duration-500 hover:scale-105"
             />
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141210]/90 border border-[#D4A53A]/50 text-[#E8C547] text-xs font-semibold uppercase tracking-[0.25em] shadow-md">
-              <span className="w-2 h-2 rounded-full bg-[#D4A53A]" />
-              <span>Good Food · Great People · A Taste of Naija</span>
+            <div className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4A53A]">
+              Good Food · Great People · A Taste of Naija
             </div>
           </div>
 
@@ -103,21 +102,21 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
           </div>
 
           {/* Trust Highlights */}
-          <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-medium text-[#FFF7E8]/80 border-t border-[#FFF7E8]/15 max-w-3xl mx-auto">
+          <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-medium text-[#FAF6F0]/85 border-t border-[#D4A53A]/25 max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#22C55E]" />
+              <ShieldCheck className="w-4 h-4 text-[#D4A53A]" />
               <span>100% Halal Meats</span>
             </div>
             <div className="flex items-center justify-center gap-1.5">
-              <Flame className="w-4 h-4 text-[#C6A15B]" />
+              <Flame className="w-4 h-4 text-[#D4A53A]" />
               <span>Charcoal Smoke Fire</span>
             </div>
             <div className="flex items-center justify-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-[#22C55E]" />
-              <span>Fresh Leafy Greens</span>
+              <Sparkles className="w-4 h-4 text-[#D4A53A]" />
+              <span>Farm-Fresh Greens</span>
             </div>
             <div className="flex items-center justify-center gap-1.5">
-              <Users className="w-4 h-4 text-[#C6A15B]" />
+              <Users className="w-4 h-4 text-[#D4A53A]" />
               <span>Warm Bukka Hospitality</span>
             </div>
           </div>
@@ -129,34 +128,34 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="text-xs uppercase tracking-[0.25em] text-[#6D1F2B] font-bold">
+            <div className="text-xs uppercase tracking-[0.25em] text-[#3D2314] font-bold">
               Our Culinary Heritage
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#211A19] leading-tight text-balance">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B0A09] leading-tight text-balance">
               More Than Food. <br />
-              <span className="italic text-[#6D1F2B]">It’s Naija Culture.</span>
+              <span className="italic text-[#3D2314]">It’s Naija Culture.</span>
             </h2>
-            <p className="text-base text-[#211A19]/80 leading-relaxed">
+            <p className="text-base text-[#0B0A09]/80 leading-relaxed">
               At <strong>NAIJA POT</strong>, we celebrate the indelible soul of Nigerian dining — from the energetic, sun-soaked street bukka joints of Lagos Island to the quiet comfort of family kitchens across Nigeria.
             </p>
-            <p className="text-base text-[#211A19]/80 leading-relaxed">
+            <p className="text-base text-[#0B0A09]/80 leading-relaxed">
               We never cut corners. Our party jollof carries that authentic, smoky firewood aroma. Our suya skewers are dusted with real northern yaji groundnut spice, charred hot over red embers. And our soups are slowly simmered with genuine dried crayfish, fermented locust beans (iru), and prime cuts of meat.
             </p>
 
             <div className="pt-2">
               <button
                 onClick={() => onNavigate('story')}
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#6D1F2B] hover:text-[#4A121B] underline underline-offset-8 transition-colors cursor-pointer group"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#3D2314] hover:text-[#5C3822] underline underline-offset-8 transition-colors cursor-pointer group"
               >
                 <span>Discover the Story of Naija Pot</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#D4A53A]" />
               </button>
             </div>
           </div>
 
           {/* Right Image */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-[#C6A15B]/30 group">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-[#D4A53A]/30 group">
               <img
                 src="/src/assets/images/food_egusi_soup_yam_1792356257944.jpg"
                 alt="Traditional Nigerian Egusi Soup with Pounded Yam"
@@ -165,7 +164,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#C6A15B]">
+                <span className="text-xs uppercase font-bold tracking-widest text-[#D4A53A]">
                   Signature Dish
                 </span>
                 <h4 className="font-serif text-xl font-bold">Rich Egusi Soup & Silky Pounded Yam</h4>
@@ -173,8 +172,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
               </div>
             </div>
             {/* Decorative Gold Badge */}
-            <div className="hidden sm:block absolute -top-5 -right-5 bg-[#6D1F2B] text-[#FFF7E8] border-2 border-[#C6A15B] p-4 rounded-xl shadow-xl text-center">
-              <span className="block font-serif text-2xl font-bold text-[#C6A15B]">100%</span>
+            <div className="hidden sm:block absolute -top-5 -right-5 bg-[#0B0A09] text-[#FFFDF9] border-2 border-[#D4A53A] p-4 rounded-xl shadow-xl text-center">
+              <span className="block font-serif text-2xl font-bold text-[#D4A53A]">100%</span>
               <span className="text-[10px] uppercase font-bold tracking-wider">Authentic Recipes</span>
             </div>
           </div>
@@ -182,27 +181,27 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
       </section>
 
       {/* 3. SIGNATURE DISHES SHOWCASE */}
-      <section className="bg-[#F3E8D6]/60 py-20 border-y border-[#6D1F2B]/10">
+      <section className="bg-[#FAF6F0] py-20 border-y border-[#D4A53A]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3">
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#6D1F2B]">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#3D2314]">
                 Curated Flavours
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#211A19]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0B0A09]">
                 Signature Naija Delicacies
               </h2>
-              <p className="text-sm text-[#211A19]/75 max-w-xl">
+              <p className="text-sm text-[#0B0A09]/75 max-w-xl">
                 Every dish is prepared to order using authentic seasonings, generous protein portions, and our signature slow-smoking technique.
               </p>
             </div>
             <button
               onClick={() => onNavigate('menu')}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#6D1F2B] text-[#FFF7E8] hover:bg-[#4A121B] rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3D2314] text-[#FFFDF9] hover:bg-[#4E2E1A] rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer shrink-0 border border-[#D4A53A]/40"
             >
               <span>Discover Full Menu</span>
-              <ChevronRight className="w-4 h-4 text-[#C6A15B]" />
+              <ChevronRight className="w-4 h-4 text-[#D4A53A]" />
             </button>
           </div>
 
@@ -211,7 +210,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
             {signatureDishes.map((dish) => (
               <div
                 key={dish.id}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-[#6D1F2B]/10 transition-all flex flex-col group"
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-[#D4A53A]/20 transition-all flex flex-col group"
               >
                 {/* Image */}
                 <div className="relative h-56 bg-[#1C1916] overflow-hidden">
@@ -244,28 +243,28 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="font-serif text-lg font-bold text-[#211A19] leading-snug group-hover:text-[#6D1F2B] transition-colors">
+                      <h3 className="font-serif text-lg font-bold text-[#0B0A09] leading-snug group-hover:text-[#3D2314] transition-colors">
                         {dish.name}
                       </h3>
-                      <span className="font-serif text-base font-bold text-[#6D1F2B] tabular-nums shrink-0">
+                      <span className="font-serif text-base font-bold text-[#3D2314] tabular-nums shrink-0">
                         £{dish.price.toFixed(2)}
                       </span>
                     </div>
-                    <p className="text-xs text-[#211A19]/75 leading-relaxed line-clamp-3">
+                    <p className="text-xs text-[#0B0A09]/75 leading-relaxed line-clamp-3">
                       {dish.description}
                     </p>
                   </div>
 
                   {/* Actions & Meta */}
                   <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
-                    <span className="text-[11px] text-[#211A19]/60">
+                    <span className="text-[11px] text-[#0B0A09]/60">
                       Heat: {dish.spiceLevel === 0 ? 'Mild' : '🌶️'.repeat(dish.spiceLevel)}
                     </span>
                     <button
                       onClick={() => onOpenDishCustomizer(dish)}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#1B5E20] hover:bg-[#10471A] text-[#FFF7E8] text-xs font-semibold rounded-md transition-colors cursor-pointer border border-[#C6A15B]/30"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#3D2314] hover:bg-[#4E2E1A] text-[#FFFDF9] text-xs font-semibold rounded-md transition-colors cursor-pointer border border-[#D4A53A]/40"
                     >
-                      <ShoppingBag className="w-3.5 h-3.5 text-[#C6A15B]" />
+                      <ShoppingBag className="w-3.5 h-3.5 text-[#D4A53A]" />
                       <span>Order Now</span>
                     </button>
                   </div>
@@ -279,66 +278,66 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
       {/* 4. WHY CHOOSE NAIJA POT? (4 VISUAL FEATURE BLOCKS) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#1B5E20]">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#3D2314]">
             The Naija Pot Difference
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#211A19]">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0B0A09]">
             Why Dine With Us?
           </h2>
-          <p className="text-sm text-[#211A19]/75">
+          <p className="text-sm text-[#0B0A09]/75">
             Rooted in authentic Nigerian culinary traditions, farm-fresh vegetables, and uncompromising standards.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Block 1 */}
-          <div className="bg-white p-8 rounded-xl border border-[#6D1F2B]/10 shadow-xs hover:shadow-md transition-shadow space-y-4">
-            <div className="w-12 h-12 rounded-lg bg-[#6D1F2B] text-[#C6A15B] flex items-center justify-center">
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs hover:shadow-md transition-shadow space-y-4">
+            <div className="w-12 h-12 rounded-lg bg-[#0B0A09] text-[#D4A53A] flex items-center justify-center border border-[#D4A53A]/40">
               <Flame className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#6D1F2B]">
+            <h3 className="font-serif text-xl font-bold text-[#3D2314]">
               Authentic Naija Flavours
             </h3>
-            <p className="text-xs text-[#211A19]/75 leading-relaxed">
+            <p className="text-xs text-[#0B0A09]/75 leading-relaxed">
               True to traditional recipes. We source our iru, crayfish, scent leaves, and northern yaji spices directly from verified purveyors.
             </p>
           </div>
 
           {/* Block 2 */}
-          <div className="bg-white p-8 rounded-xl border border-[#1B5E20]/25 shadow-xs hover:shadow-md transition-shadow space-y-4">
-            <div className="w-12 h-12 rounded-lg bg-[#1B5E20] text-[#FFF7E8] flex items-center justify-center border border-[#C6A15B]/40">
-              <UtensilsCrossed className="w-6 h-6 text-[#C6A15B]" />
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs hover:shadow-md transition-shadow space-y-4">
+            <div className="w-12 h-12 rounded-lg bg-[#0B0A09] text-[#D4A53A] flex items-center justify-center border border-[#D4A53A]/40">
+              <UtensilsCrossed className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#1B5E20]">
+            <h3 className="font-serif text-xl font-bold text-[#3D2314]">
               Farm-Fresh Leafy Greens
             </h3>
-            <p className="text-xs text-[#211A19]/75 leading-relaxed">
-              Real Nigerian cooking thrives on fresh vegetables. We cook daily with vibrant ugwu (pumpkin leaves), bitterleaf, and scent leaves (efirin) for unbeatable aroma and vitality.
+            <p className="text-xs text-[#0B0A09]/75 leading-relaxed">
+              Real Nigerian cooking thrives on fresh vegetables. We cook daily with vibrant ugwu (pumpkin leaves), bitterleaf, and scent leaves for unbeatable aroma and vitality.
             </p>
           </div>
 
           {/* Block 3 */}
-          <div className="bg-white p-8 rounded-xl border border-[#6D1F2B]/10 shadow-xs hover:shadow-md transition-shadow space-y-4">
-            <div className="w-12 h-12 rounded-lg bg-[#6D1F2B] text-[#C6A15B] flex items-center justify-center">
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs hover:shadow-md transition-shadow space-y-4">
+            <div className="w-12 h-12 rounded-lg bg-[#0B0A09] text-[#D4A53A] flex items-center justify-center border border-[#D4A53A]/40">
               <Users className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#6D1F2B]">
+            <h3 className="font-serif text-xl font-bold text-[#3D2314]">
               Made for Sharing
             </h3>
-            <p className="text-xs text-[#211A19]/75 leading-relaxed">
+            <p className="text-xs text-[#0B0A09]/75 leading-relaxed">
               Nigerian food is communal. Our generous bukka platters and sharing bowls bring families, friends, and colleagues together.
             </p>
           </div>
 
           {/* Block 4 */}
-          <div className="bg-white p-8 rounded-xl border border-[#6D1F2B]/10 shadow-xs hover:shadow-md transition-shadow space-y-4">
-            <div className="w-12 h-12 rounded-lg bg-[#6D1F2B] text-[#C6A15B] flex items-center justify-center">
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs hover:shadow-md transition-shadow space-y-4">
+            <div className="w-12 h-12 rounded-lg bg-[#0B0A09] text-[#D4A53A] flex items-center justify-center border border-[#D4A53A]/40">
               <HeartHandshake className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#6D1F2B]">
+            <h3 className="font-serif text-xl font-bold text-[#3D2314]">
               Warm Hospitality
             </h3>
-            <p className="text-xs text-[#211A19]/75 leading-relaxed">
+            <p className="text-xs text-[#0B0A09]/75 leading-relaxed">
               From our vibrant Afrobeat sounds to attentive, gracious service, step into an atmosphere where every guest is welcomed like family.
             </p>
           </div>
@@ -388,72 +387,85 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
       {/* 6. GENUINE CUSTOMER EXPERIENCES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#6D1F2B]">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#3D2314]">
             Guest Voices
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#211A19]">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0B0A09]">
             The Naija Pot Experience
           </h2>
-          <p className="text-sm text-[#211A19]/75">
+          <p className="text-sm text-[#0B0A09]/75">
             Real feedback from diners who cherish bold authentic West African flavours and heartfelt hospitality.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl border border-[#6D1F2B]/10 shadow-xs flex flex-col justify-between space-y-6">
-            <p className="text-sm text-[#211A19]/85 italic leading-relaxed">
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs flex flex-col justify-between space-y-6">
+            <p className="text-sm text-[#0B0A09]/85 italic leading-relaxed">
               "Finding genuine party jollof with that unmistakable firewood smokiness in London has always been tough until Naija Pot opened. The beef suya was tender with just the right kick of yaji spice."
             </p>
             <div className="pt-4 border-t border-slate-100">
-              <p className="font-serif font-bold text-sm text-[#6D1F2B]">Tunde & Folake Balogun</p>
-              <p className="text-xs text-[#211A19]/60">Dinner Guests · London</p>
+              <p className="font-serif font-bold text-sm text-[#3D2314]">Tunde & Folake Balogun</p>
+              <p className="text-xs text-[#0B0A09]/60">Dinner Guests · London</p>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-xl border border-[#6D1F2B]/10 shadow-xs flex flex-col justify-between space-y-6">
-            <p className="text-sm text-[#211A19]/85 italic leading-relaxed">
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs flex flex-col justify-between space-y-6">
+            <p className="text-sm text-[#0B0A09]/85 italic leading-relaxed">
               "The Egusi soup with pounded yam is outstanding. You can tell they use genuine stockfish and bitterleaf without cutting corners. The Chapman cocktail brought back so many childhood memories."
             </p>
             <div className="pt-4 border-t border-slate-100">
-              <p className="font-serif font-bold text-sm text-[#6D1F2B]">Chidinma Okafor</p>
-              <p className="text-xs text-[#211A19]/60">Regular Patron · Hackney</p>
+              <p className="font-serif font-bold text-sm text-[#3D2314]">Chidinma Okafor</p>
+              <p className="text-xs text-[#0B0A09]/60">Regular Patron · Hackney</p>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-xl border border-[#6D1F2B]/10 shadow-xs flex flex-col justify-between space-y-6">
-            <p className="text-sm text-[#211A19]/85 italic leading-relaxed">
+          <div className="bg-white p-8 rounded-xl border border-[#D4A53A]/20 shadow-xs flex flex-col justify-between space-y-6">
+            <p className="text-sm text-[#0B0A09]/85 italic leading-relaxed">
               "Hosted my 30th birthday dinner here with 14 friends. The Lagos Bukka Sharing Platter fed everyone generously. Service was warm, prompt, and the atmosphere felt like home."
             </p>
             <div className="pt-4 border-t border-slate-100">
-              <p className="font-serif font-bold text-sm text-[#6D1F2B]">David Alabi</p>
-              <p className="text-xs text-[#211A19]/60">Group Celebration · Spitalfields</p>
+              <p className="font-serif font-bold text-sm text-[#3D2314]">David Alabi</p>
+              <p className="text-xs text-[#0B0A09]/60">Group Celebration · Spitalfields</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 7. INSTAGRAM & SOCIAL GALLERY */}
-      <section className="bg-[#F3E8D6]/60 py-20 border-y border-[#6D1F2B]/10">
+      <section className="bg-[#FAF6F0] py-20 border-y border-[#D4A53A]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#6D1F2B]">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#3D2314]">
                 Follow Along
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#211A19]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0B0A09]">
                 A Taste of Naija, Every Day
               </h2>
             </div>
-            <a
-              href={siteConfig.socials.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#6D1F2B] hover:text-[#4A121B] transition-colors"
-            >
-              <Instagram className="w-4 h-4 text-[#C6A15B]" />
-              <span>@naijapotkitchen</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            <div className="flex items-center gap-3 flex-wrap">
+              <a
+                href={siteConfig.socials.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#3D2314] hover:text-[#D4A53A] transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-[#D4A53A]" />
+                <span>@naijapotkitchen_grill_mk</span>
+              </a>
+              <span className="text-stone-300">·</span>
+              <a
+                href={siteConfig.socials.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#3D2314] hover:text-[#D4A53A] transition-colors"
+              >
+                <svg className="w-4 h-4 fill-current text-[#D4A53A]" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.88-4.47V8.58a8.27 8.27 0 0 0 4.84 1.56V6.69z"/>
+                </svg>
+                <span>@naija.pot.kitchen</span>
+              </a>
+            </div>
           </div>
 
           {/* Gallery Preview Grid */}
@@ -466,7 +478,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                <Instagram className="w-6 h-6 text-[#C6A15B]" />
+                <Instagram className="w-6 h-6 text-[#D4A53A]" />
               </div>
             </div>
 
@@ -478,7 +490,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                <Instagram className="w-6 h-6 text-[#C6A15B]" />
+                <Instagram className="w-6 h-6 text-[#D4A53A]" />
               </div>
             </div>
 
@@ -490,19 +502,19 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                <Instagram className="w-6 h-6 text-[#C6A15B]" />
+                <Instagram className="w-6 h-6 text-[#D4A53A]" />
               </div>
             </div>
 
             <div className="aspect-square rounded-lg overflow-hidden relative group">
               <img
-                src="/src/assets/images/hero_naija_feast_1792356256861.jpg"
-                alt="Grand feast spread"
+                src="/src/assets/images/craft_chapman_cocktail_1792960788048.jpg"
+                alt="Naija Pot Chapman cocktail"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                <Instagram className="w-6 h-6 text-[#C6A15B]" />
+                <Instagram className="w-6 h-6 text-[#D4A53A]" />
               </div>
             </div>
           </div>
@@ -511,8 +523,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
 
       {/* 8. NEWSLETTER SUBSCRIPTION */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#6D1F2B] text-[#FFF7E8] p-8 sm:p-12 rounded-2xl shadow-xl border border-[#C6A15B]/40 text-center space-y-6">
-          <div className="inline-flex p-3 rounded-full bg-[#4A121B] text-[#C6A15B]">
+        <div className="bg-[#141210] text-[#FFFDF9] p-8 sm:p-12 rounded-2xl shadow-xl border border-[#D4A53A]/40 text-center space-y-6">
+          <div className="inline-flex p-3 rounded-full bg-[#1E1B18] text-[#D4A53A] border border-[#D4A53A]/30">
             <Sparkles className="w-6 h-6" />
           </div>
 
@@ -520,14 +532,14 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
             <h2 className="font-serif text-2xl sm:text-3xl font-bold">
               Stay Connected With Naija Pot
             </h2>
-            <p className="text-xs sm:text-sm text-[#FFF7E8]/85 max-w-lg mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm text-stone-300 max-w-lg mx-auto leading-relaxed">
               Join our culinary circle for exclusive table releases, seasonal chef specials, Nigerian cultural feast nights, and festive menu previews.
             </p>
           </div>
 
           {newsletterSubmitted ? (
-            <div className="p-4 bg-[#4A121B] border border-[#C6A15B] rounded-lg max-w-md mx-auto text-xs flex items-center justify-center gap-2 text-[#FFF7E8]">
-              <CheckCircle2 className="w-5 h-5 text-[#C6A15B] shrink-0" />
+            <div className="p-4 bg-[#1E1B18] border border-[#D4A53A]/40 rounded-lg max-w-md mx-auto text-xs flex items-center justify-center gap-2 text-[#FAF6F0]">
+              <CheckCircle2 className="w-5 h-5 text-[#D4A53A] shrink-0" />
               <span>E se gan! Thank you for subscribing. We will keep you updated.</span>
             </div>
           ) : (
@@ -539,11 +551,11 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 rounded-lg bg-white text-[#211A19] text-xs focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+                  className="flex-1 px-4 py-3 rounded-lg bg-white text-[#0B0A09] text-xs focus:outline-none focus:ring-2 focus:ring-[#D4A53A]"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#C6A15B] hover:bg-[#DFC183] text-[#211A19] font-bold text-xs uppercase tracking-wider rounded-lg transition-colors cursor-pointer shrink-0"
+                  className="px-6 py-3 bg-[#D4A53A] hover:bg-[#E8C547] text-[#0B0A09] font-bold text-xs uppercase tracking-wider rounded-lg transition-colors cursor-pointer shrink-0"
                 >
                   Subscribe
                 </button>
@@ -551,7 +563,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenDishCustomizer }) 
               {newsletterError && (
                 <p className="text-xs text-red-300 text-left">{newsletterError}</p>
               )}
-              <p className="text-[11px] text-[#FFF7E8]/60">
+              <p className="text-[11px] text-stone-400">
                 We respect your inbox. Unsubscribe at any time. No spam.
               </p>
             </form>

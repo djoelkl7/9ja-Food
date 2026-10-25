@@ -19,6 +19,7 @@ cpanel-package/
 ├── js/
 │   └── main.js                  # Persistent cart, WhatsApp generator, menu filter, validation
 ├── images/                      # Realistic Nigerian food photography & official logos
+│   ├── craft_chapman_cocktail.jpg
 │   ├── food_beef_suya_grill_1792356257070.jpg
 │   ├── food_egusi_soup_yam_1792356257944.jpg
 │   ├── food_jollof_party_platter_1792356258654.jpg

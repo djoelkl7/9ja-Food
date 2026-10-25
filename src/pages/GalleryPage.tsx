@@ -54,7 +54,19 @@ export const GalleryPage: React.FC = () => {
         </div>
 
         {/* Responsive Editorial Grid with Intersection Observer Lazy Loading, Scale Transition and Hover Color Overlay */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredGallery.length === 0 ? (
+          <div className="text-center py-16 bg-white rounded-xl border border-[#D4A53A]/25 p-8 space-y-3">
+            <p className="text-base font-serif font-bold text-[#0B0A09]">No items in this collection yet</p>
+            <p className="text-xs text-stone-600">Please explore our other categories or check our full menu for seasonal selections.</p>
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className="mt-2 px-4 py-2 bg-[#3D2314] text-[#D4A53A] text-xs font-bold rounded-lg border border-[#D4A53A]/40 hover:bg-[#4E2E1A] transition-colors cursor-pointer"
+            >
+              View All Moments
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredGallery.map((item, index) => (
             <div
               key={item.id}
@@ -95,6 +107,7 @@ export const GalleryPage: React.FC = () => {
             </div>
           ))}
         </div>
+        )}
       </section>
 
       {/* Lightbox Modal */}

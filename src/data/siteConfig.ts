@@ -111,8 +111,8 @@ export const siteConfig: RestaurantConfig = {
   ],
 
   socials: {
-    instagram: "https://instagram.com/naijapotkitchen",
-    tiktok: "https://tiktok.com/@naijapotkitchen",
+    instagram: "https://www.instagram.com/naijapotkitchen_grill_mk",
+    tiktok: "https://www.tiktok.com/@naija.pot.kitchen",
     facebook: "https://facebook.com/naijapotkitchen",
     whatsapp: "https://wa.me/447342229865",
   },

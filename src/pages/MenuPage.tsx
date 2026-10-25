@@ -157,7 +157,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onOpenDishCustomizer }) => {
 
         {/* Category Tagline (if specific category selected) */}
         {selectedCategory !== 'all' && (
-          <div className="bg-[#FAF6F0] p-4 rounded-lg border-l-4 border-[#3D2314] text-xs text-stone-700">
+          <div className="bg-[#FAF6F0] p-4 rounded-xl border border-[#D4A53A]/30 text-xs text-stone-700">
             <span className="font-bold text-[#3D2314] mr-2">
               {menuCategories.find((c) => c.key === selectedCategory)?.label}:
             </span>
@@ -167,10 +167,10 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onOpenDishCustomizer }) => {
 
         {/* Dishes Grid */}
         {filteredItems.length === 0 ? (
-          <div className="bg-white p-12 text-center rounded-xl border border-slate-200 space-y-3">
-            <UtensilsCrossed className="w-10 h-10 text-slate-300 mx-auto" />
-            <h3 className="font-serif text-lg font-bold text-[#211A19]">No dishes match your filter</h3>
-            <p className="text-xs text-slate-500">
+          <div className="bg-white p-12 text-center rounded-xl border border-[#D4A53A]/20 space-y-3">
+            <UtensilsCrossed className="w-10 h-10 text-stone-300 mx-auto" />
+            <h3 className="font-serif text-lg font-bold text-[#0B0A09]">No dishes match your filter</h3>
+            <p className="text-xs text-stone-500">
               Try clearing your search query or selecting another dietary preference.
             </p>
             <button
@@ -179,7 +179,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onOpenDishCustomizer }) => {
                 setSearchQuery('');
                 setDietaryFilter('all');
               }}
-              className="mt-2 px-4 py-2 bg-[#6D1F2B] text-[#FFF7E8] text-xs font-semibold rounded-md cursor-pointer"
+              className="mt-2 px-4 py-2 bg-[#3D2314] text-[#D4A53A] border border-[#D4A53A]/40 text-xs font-semibold rounded-md hover:bg-[#4E2E1A] transition-colors cursor-pointer"
             >
               Reset All Filters
             </button>
@@ -189,7 +189,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onOpenDishCustomizer }) => {
             {filteredItems.map((dish) => (
               <div
                 key={dish.id}
-                className="bg-white rounded-xl overflow-hidden border border-[#6D1F2B]/10 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                className="bg-white rounded-xl overflow-hidden border border-[#D4A53A]/20 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Image container with subtle scale transition and slight color overlay on hover */}

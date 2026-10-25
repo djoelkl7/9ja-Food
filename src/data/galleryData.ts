@@ -68,4 +68,13 @@ export const galleryItems: GalleryItem[] = [
     caption: 'Caramelized sweet plantains, roasted peppered chicken leg, and bottom-pot smoky Nigerian jollof rice.',
     alt: 'Platter of reddish smoky Nigerian jollof rice with fried plantains and peppered chicken',
   },
+  {
+    id: 'gal-6',
+    title: 'The Signature Naija Chapman Cocktail',
+    category: 'drinks',
+    categoryLabel: 'Craft Drinks',
+    image: '/src/assets/images/craft_chapman_cocktail_1792960788048.jpg',
+    caption: 'Classic celebratory cocktail crafted with Angostura bitters, citrus, cucumber ribbons, and crushed ice.',
+    alt: 'Chilled Nigerian Chapman cocktail in highball crystal glass with cucumber ribbon and lemon garnish',
+  },
 ];

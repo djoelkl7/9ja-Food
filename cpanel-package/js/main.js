@@ -168,7 +168,7 @@
       price: 6.50, // [Placeholder Price]
       spiceLevel: 0,
       dietary: ["Vegetarian", "Vegan"],
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80",
+      image: "images/craft_chapman_cocktail.jpg",
       description: "Iconic sparkling blend of citrus, pomegranate bitters, cucumber ribbons, fresh mint, and orange slices."
     },
     {
@@ -635,6 +635,11 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value.trim())) {
           document.getElementById("resEmailError").textContent = "Please enter a valid email address.";
+          valid = false;
+        }
+
+        if (!guests.value || parseInt(guests.value, 10) < 1) {
+          document.getElementById("resGuestsError").textContent = "Please select the number of guests.";
           valid = false;
         }
 

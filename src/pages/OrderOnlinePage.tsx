@@ -112,9 +112,9 @@ export const OrderOnlinePage: React.FC<OrderOnlinePageProps> = ({ onOpenDishCust
 
           {/* Dishes in Selected Category */}
           <div className="lg:col-span-9 space-y-6">
-            <div className="flex items-center justify-between border-b border-[#6D1F2B]/15 pb-3">
+            <div className="flex items-center justify-between border-b border-[#D4A53A]/20 pb-3">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#6D1F2B]">
+                <h2 className="font-serif text-2xl font-bold text-[#0B0A09]">
                   {menuCategories.find((c) => c.key === activeCategory)?.label}
                 </h2>
                 <p className="text-xs text-[#211A19]/70">
@@ -127,7 +127,7 @@ export const OrderOnlinePage: React.FC<OrderOnlinePageProps> = ({ onOpenDishCust
               {categoryItems.map((dish) => (
                 <div
                   key={dish.id}
-                  className="bg-white p-4 rounded-xl border border-[#6D1F2B]/10 shadow-xs hover:shadow-md transition-all flex gap-4"
+                  className="bg-white p-4 rounded-xl border border-[#D4A53A]/20 shadow-xs hover:shadow-md transition-all flex gap-4"
                 >
                   {/* Thumbnail */}
                   {dish.image && (
