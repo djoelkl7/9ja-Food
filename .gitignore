@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Production builds & output
+build/
+dist/
+coverage/
+
+# OS & temporary files
+.DS_Store
+*.log
+*.tmp
+*.swp
+
+# Environment variables & secrets (CRITICAL: never commit secrets or keys)
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa*
+secrets/
+credentials.json
+

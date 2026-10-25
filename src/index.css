@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Italiana", "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  /* Brand Colors: Black, Brown, and Gold */
+  --color-black: #0B0A09;
+  --color-brand-black: #0B0A09;
+  --color-black-soft: #141210;
+  --color-charcoal: #141210;
+  --color-charcoal-2: #1E1B18;
+  --color-charcoal-3: #28231F;
+  --color-deep-charcoal: #141210;
+  
+  --color-brand-brown: #3D2314;
+  --color-brown: #3D2314;
+  --color-brown-dark: #26160C;
+  --color-brown-warm: #4A2C1A;
+  --color-brown-light: #5C3822;
+  --color-brown-caramel: #8D5B39;
+
+  --color-brand-gold: #D4A53A;
+  --color-royal-gold: #D4A53A;
+  --color-gold: #D4A53A;
+  --color-gold-light: #E8C547;
+  --color-gold-bright: #F5CE58;
+  --color-gold-dim: #9E7B28;
+  --color-royal-gold-light: #E8C547;
+  --color-royal-gold-dark: #9E7B28;
+
+  --color-burgundy: #3D2314; /* Mapped to signature rich brown */
+  --color-burgundy-dark: #26160C; /* Mapped to deep brown-black */
+  --color-burgundy-light: #4A2C1A;
+
+  --color-whatsapp-green: #25D366;
+  --color-whatsapp-dark: #128C7E;
+
+  --color-cream: #F4ECE4;
+  --color-warm-ivory: #FAF6F0;
+  --color-soft-cream: #F4ECE4;
+  --color-text-muted: #9E9388;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #1C1916;
+    background-color: #FFF7E8;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Bukka scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5E6D3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A53A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B33B17;
+}
+
+/* Shimmer pulse for lazy loaded image placeholders */
+@keyframes bukkaShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.lazy-image-placeholder {
+  background: linear-gradient(90deg, #1C1916 25%, #25211C 50%, #1C1916 75%);
+  background-size: 200% 100%;
+  animation: bukkaShimmer 2s infinite ease-in-out;
+}

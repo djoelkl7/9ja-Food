@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Online Takeaway Order | NAIJA POT KITCHEN & GRILL LTD</title>
+  <meta name="description" content="Order authentic Nigerian food online for takeaway collection via WhatsApp. Real-time basket calculator, custom collection times, and instant kitchen confirmation.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Admin Verification Banner -->
+  <div class="placeholder-notice-banner">
+    ⚠️ <strong>Admin Notice:</strong> The WhatsApp ordering number is set to <code>+44 7342 229865 [Placeholder]</code> in <code>js/main.js</code>. Update with your official business line.
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Naija Pot Home">
+        <img src="images/logo.png" alt="Naija Pot Logo" class="brand-logo-img">
+        <div class="brand-titles">
+          <span class="brand-name">NAIJA POT</span>
+          <span class="brand-tagline">KITCHEN & GRILL LTD</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="story.html" class="nav-link">Our Story</a></li>
+          <li><a href="order.html" class="nav-link active">WhatsApp Order</a></li>
+          <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="reservations.html" class="btn btn-outline btn-sm desktop-only">Book Table</a>
+        <a href="order.html" class="cart-btn" aria-label="View Order Bag">
+          <span aria-hidden="true">🛍️</span>
+          <span class="desktop-only">Bag</span>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <span class="page-banner-subtitle">DIRECT KITCHEN DISPATCH</span>
+        <h1 class="page-banner-title">WhatsApp Online Ordering</h1>
+        <p class="page-banner-desc">
+          Review your selected takeaway items, pick your preferred collection time, and dispatch your order directly to our kitchen desk on WhatsApp for instant confirmation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ordering Workspace Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="order-layout">
+          
+          <!-- Left Column: Basket Items -->
+          <div class="order-box">
+            <div class="order-box-title">
+              <span>Your Basket Items</span>
+              <a href="menu.html" class="btn btn-sm btn-outline">+ Add More Dishes</a>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyOrderState" class="success-box" style="display: none; background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🛍️</div>
+              <h3 style="color: var(--color-ivory);">Your basket is currently empty</h3>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+                Browse our smoky Jollof rice, charcoal beef suya, and rich traditional soups to start your order!
+              </p>
+              <a href="menu.html" class="btn btn-primary">Browse Full Menu &rarr;</a>
+            </div>
+
+            <!-- Active Items Table -->
+            <div style="overflow-x: auto;">
+              <table class="order-items-table">
+                <thead>
+                  <tr>
+                    <th>Dish</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                  <!-- Populated dynamically by js/main.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+              <button class="btn btn-sm btn-secondary" id="clearOrderBtn">Clear Basket</button>
+              <span style="font-size: 0.82rem; color: var(--color-text-muted);">Prices include standard UK VAT <span class="placeholder-tag">[Placeholder]</span></span>
+            </div>
+          </div>
+
+          <!-- Right Column: Collection Form & WhatsApp Checkout -->
+          <div class="order-box" id="orderSummaryCard">
+            <div class="order-box-title">
+              <span>Collection & WhatsApp Dispatch</span>
+            </div>
+
+            <form id="orderCheckoutForm" class="app-form">
+              <div class="form-group">
+                <label for="custName">Your Full Name *</label>
+                <input type="text" id="custName" placeholder="e.g. Adebayo Ogunlesi" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="custPhone">Contact Phone Number *</label>
+                <input type="tel" id="custPhone" placeholder="e.g. +44 7123 456789" required autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="custTime">Estimated Collection Time *</label>
+                <select id="custTime" required>
+                  <option value="ASAP (approx. 25-35 mins)">ASAP (~25 - 35 mins)</option>
+                  <option value="In 45 minutes">In 45 minutes</option>
+                  <option value="In 1 hour">In 1 hour</option>
+                  <option value="In 1 hour 30 minutes">In 1 hour 30 minutes</option>
+                  <option value="Evening Collection (6:00 PM - 7:00 PM)">Evening (6:00 PM - 7:00 PM)</option>
+                  <option value="Evening Collection (7:30 PM - 8:30 PM)">Evening (7:30 PM - 8:30 PM)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="custNotes">Special Instructions / Allergies</label>
+                <textarea id="custNotes" rows="2" placeholder="e.g. Extra spicy, no onions on Suya, peanut allergy note..."></textarea>
+              </div>
+
+              <!-- Price Totals Breakdown -->
+              <div style="background: var(--color-charcoal); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.25rem; margin: 0.5rem 0 1rem;">
+                <div class="order-summary-row">
+                  <span>Subtotal</span>
+                  <span id="orderSubtotal">£0.00</span>
+                </div>
+                <div class="order-summary-row">
+                  <span>Collection Location</span>
+                  <span style="text-align: right;">14 Heritage Parade <span class="placeholder-tag">[Placeholder]</span></span>
+                </div>
+                <div class="order-summary-row total-row">
+                  <strong>Total to Pay</strong>
+                  <strong id="orderTotal">£0.00</strong>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp btn-block" id="submitWhatsAppOrderBtn" style="padding: 1rem; font-size: 1rem;">
+                <span>💬 Send Order to WhatsApp (+44 7342 229865)</span>
+              </button>
+
+              <p style="font-size: 0.78rem; color: var(--color-text-muted); text-align: center; margin-top: 0.5rem;">
+                🔒 Clicking opens WhatsApp with your pre-formatted order. Pay securely on collection (Card / Cash / Contactless).
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+          <img src="images/logo.png" alt="Naija Pot Logo" class="brand-logo-img">
+          <div class="brand-titles">
+            <span class="brand-name">NAIJA POT</span>
+            <span class="brand-tagline">KITCHEN & GRILL LTD</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Authentic Nigerian kitchen and charcoal grill inspired by the rich cultural flavours of Lagos bukka culinary heritage.
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com/naijapotkitchen" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Follow us on Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://instagram.com/naijapotkitchen" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Follow us on Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@naijapotkitchen" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="TikTok" title="Follow us on TikTok">
+            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.88-4.47V8.58a8.27 8.27 0 0 0 4.84 1.56V6.69z"/></svg>
+          </a>
+          <a href="https://wa.me/447342229865" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp" title="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.587 1.761.88 2.8.88 3.182 0 5.768-2.587 5.768-5.766.001-3.181-2.585-5.767-5.772-5.772-5.767zm7.65 5.766c0 4.218-3.433 7.651-7.65 7.651-1.336 0-2.434-.343-3.489-.968l-4.542 1.19 1.213-4.432c-.696-1.111-1.066-2.228-1.066-3.441 0-4.219 3.433-7.651 7.65-7.651 4.217 0 7.649 3.432 7.649 7.651z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="order.html">WhatsApp Ordering</a></li>
+          <li><a href="reservations.html">Book a Table</a></li>
+          <li><a href="contact.html">Contact & Hours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Pickup Information</h4>
+        <ul>
+          <li><span>14 Heritage Parade, High Street [Placeholder]</span></li>
+          <li><span>London, E1 6AN [Placeholder]</span></li>
+          <li><span>Tue–Sun from 12:00 PM</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter-col">
+        <h4>Direct Phone Desk</h4>
+        <p>Need urgent order adjustments? Call us directly:</p>
+        <a href="tel:+447444614764" class="btn btn-sm btn-outline">
+          📞 +44 7444 614764 <span class="placeholder-tag">[Placeholder]</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; <span id="currentYear"></span> NAIJA POT KITCHEN & GRILL LTD. All Rights Reserved.</p>
+        <p>Authentic West African charcoal dining in London.</p>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="floating-actions">
+    <a href="https://wa.me/447342229865" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+      <span aria-hidden="true">💬</span>
+      <span>WhatsApp Us</span>
+    </a>
+    <button class="back-to-top-btn hidden" id="backToTopBtn" aria-label="Back to top">&uarr;</button>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
